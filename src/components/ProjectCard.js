@@ -3,12 +3,12 @@ import { Box, Card, CardHeader } from '@material-ui/core';
 import Avatar from '@mui/material/Avatar';
 import CardMedia from '@mui/material/CardMedia';
 import CardActions from '@mui/material/CardActions';
-
+import '../Projects.css';
 
 function ProjectCard(props) {
     return (
-        <Box className='flex'>
-            <Card className='w-80 ml-20 sm:ml-72 rounded-lg'>
+        <Box className='flex transform project-box hover:scale-110'>
+            <Card className='w-80 rounded-lg'>
                 {/* <CardHeader className='text-base'
                 // title={props.title}
             /> */}

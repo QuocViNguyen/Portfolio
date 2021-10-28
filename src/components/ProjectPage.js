@@ -12,10 +12,6 @@ import littleviet from '../imgs/projects/littleviet.png';
 import FindOrDie from '../imgs/projects/FindOrDie.png';
 import Abyssal from '../imgs/projects/Abyssal.png';
 
-import GitHub from '../imgs/GitHub.png';
-import LinkedIn from '../imgs/LinkedInLg.png';
-import Itchio from '../imgs/itchio.svg';
-
 //Payroll project's tech
 import mySQL from '../imgs/techIcons/mysql.png';
 import php from '../imgs/techIcons/php.png';
@@ -34,15 +30,17 @@ import materialui from '../imgs/techIcons/materialui.png';
 import tailwindcss from '../imgs/techIcons/tailwindcss.svg';
 //Game's tech
 import unity from '../imgs/techIcons/unity.png';
-
 //#endregion import
 
 
 function ProjectPage() {
     return (
-        <Box className='flex-col h-screen w-screen bg-blue-100'>
-            <Box className='flex items-center justify-center m-auto w-8/12 h-1/2 pt-96'>
+        <Box className='flex-col bg-blue-100'>
+            <br /><br /><br />
+            <h1 className='text-center text-2xl font-bold'>MY PROJECTS</h1>
+            <Box className='flex items-center justify-center m-auto w-8/12 h-1/2 pt-36 pb-12'>
                 <Carousel
+                    // itemWidth={320}
                     plugins={[
                         'infinite',
                         'arrows',
@@ -53,38 +51,39 @@ function ProjectPage() {
                             }
                         },
                     ]}
-                >
-                    <ProjectCard className=''
-                        title="Payroll Mobile App"
-                        image={payrollThumb}
-                        icons={[mySQL, php, xamarin]}
-                    />
-                    <ProjectCard
-                        title="Truck Service Website"
-                        image={PrairieTruckWebsite}
-                        icons={[html, css, javascript, bootstrap]}
-                    />
-                    <ProjectCard
-                        title="Android Focus Mobile App"
-                        image={tubtrunk}
-                        icons={[flutter, firebase]}
-                    />
-                    <ProjectCard
-                        title="Little Viet Bubble Tea Website"
-                        image={littleviet}
-                        icons={[react, materialui, tailwindcss]}
-                    />
-                    <ProjectCard
-                        title="Find Or Die"
-                        image={FindOrDie}
-                        icons={[unity]}
-                    />
-                    <ProjectCard
-                        title="Abyssal Secret"
-                        image={Abyssal}
-                        icons={[unity]}
-                    />
-                </Carousel>
+                    slides={[
+                        (<ProjectCard className=''
+                            title="Payroll Mobile App"
+                            image={payrollThumb}
+                            icons={[mySQL, php, xamarin]}
+                        />),
+                        (<ProjectCard
+                            title="Truck Service Website"
+                            image={PrairieTruckWebsite}
+                            icons={[html, css, javascript, bootstrap]}
+                        />),
+                        (<ProjectCard
+                            title="Android Focus Mobile App"
+                            image={tubtrunk}
+                            icons={[flutter, firebase]}
+                        />),
+                        (<ProjectCard
+                            title="Little Viet Bubble Tea Website"
+                            image={littleviet}
+                            icons={[react, materialui, tailwindcss]}
+                        />),
+                        (<ProjectCard
+                            title="Find Or Die"
+                            image={FindOrDie}
+                            icons={[unity]}
+                        />),
+                        (<ProjectCard
+                            title="Abyssal Secret"
+                            image={Abyssal}
+                            icons={[unity]}
+                        />),
+                    ]}
+                />
             </Box>
         </Box>
     );
