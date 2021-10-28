@@ -1,4 +1,4 @@
-#Jarvis Nguyen's Portfolio
+# Jarvis Nguyen's Portfolio
 
 I created this portfolio using React framework, with the help of Material UI's components and TailwindCSS.
 
