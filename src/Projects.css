@@ -1,6 +1,6 @@
 
 .project-box{
-    transition: box-shadow .3s;
+    transition: all 0.5s;
 }
 
 .project-box:hover {

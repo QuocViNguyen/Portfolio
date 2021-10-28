@@ -7,7 +7,7 @@ import '../Projects.css';
 
 function ProjectCard(props) {
     return (
-        <Box className='flex transform project-box hover:scale-110'>
+        <Box className='flex transform project-box hover:scale-110 hover:-translate-y-1 transition ease-in-out'>
             <Card className='w-80 rounded-lg'>
                 {/* <CardHeader className='text-base'
                 // title={props.title}
