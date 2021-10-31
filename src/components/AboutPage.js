@@ -5,7 +5,8 @@ import { Divider } from '@material-ui/core';
 import GitHub from '../imgs/GitHub.png';
 import LinkedIn from '../imgs/LinkedInLg.png';
 import Itchio from '../imgs/itchio.svg';
-import ProjectCard from './ProjectCard';
+import CVicon from '../imgs/cv.png';
+import CV from '../documents/Resume.pdf';
 
 function AboutPage() {
     return (
@@ -25,8 +26,8 @@ function AboutPage() {
                         to look at my portfolio. Currently I am working on a MERN project and also maintain a Xamarin Project
                         using previous experience from Flutter & Android Studio Projects.
                         <br /><br />
-                        I am actively looking for an open junior position in Software & Web Development. My projects and work experiences below
-                        is the proof that I am a quality choice if you are looking for one.
+                        I am actively looking for an open junior position in Software & Web Development. My projects and work
+                        experiences below is the proof that I am a quality choice if you are looking for one.
                     </p>
                 </Card>
                 <Box className='flex socialpages justify-center space-x-10 py-6'>
@@ -38,6 +39,9 @@ function AboutPage() {
                     </a>
                     <a href='https://itch.io/c/1870755/charlesivnguyen4s-collection' target="_blank" rel="noreferrer">
                         <Avatar alt="Itch.io" src={Itchio} className='w-16 h-auto hover:bg-gray-300' variant='rounded' sx={{ width: 52, height: 52 }}/>
+                    </a>
+                    <a href={CV} target="_blank" rel="noreferrer">
+                        <Avatar alt="My Resume" src={CVicon} className='w-16 h-auto hover:bg-gray-300' variant='rounded' sx={{ width: 52, height: 52 }}/>
                     </a>
                 </Box>
             </Box>
