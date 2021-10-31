@@ -6,7 +6,7 @@ import GitHub from '../imgs/GitHub.png';
 import LinkedIn from '../imgs/LinkedInLg.png';
 import Itchio from '../imgs/itchio.svg';
 import CVicon from '../imgs/cv.png';
-import CV from '../documents/Resume.pdf';
+import CV from '../documents/Resume_Official.pdf';
 
 function AboutPage() {
     return (
