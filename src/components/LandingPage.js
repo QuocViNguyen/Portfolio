@@ -16,7 +16,7 @@ function LandingPage(props) {
                     {/* From width size small and larger, apply ml-80 */}
                     <div className='sm:ml-80'>
                         <img src={landingEmoji} alt="loading..." />
-                        <p className='ml-8 sm:ml-0 text-3xl sm:text-4xl font-bold'>JARVIS NGUYEN</p>
+                        <p className='ml-8 sm:ml-0 text-3xl sm:text-4xl font-bold'>JARVIS VI NGUYEN</p>
                         <p className='text-1xl sm:text-2xl ml-2 sm:-ml-16'> I AM A JUNIOR {' '}
                             <Typical
                                 steps={['WEB DEVELOPER 🌐', 1600, 'MOBILE APP DEVELOPER 📱', 1600]}
