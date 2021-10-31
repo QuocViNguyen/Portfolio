@@ -8,9 +8,7 @@ import Backdrop from '@mui/material/Backdrop';
 import Modal from '@mui/material/Modal';
 import Fade from '@mui/material/Fade';
 import { useToggle } from "rooks";
-import GitHubIcon from '@mui/icons-material/GitHub';
 import Avatar from '@mui/material/Avatar';
-import GitHub from '../imgs/GitHub.png';
 import Grid from '@mui/material/Grid';
 import Source from '../imgs/source.png';
 import Show from '../imgs/show.png';
@@ -27,13 +25,9 @@ const style = {
     p: 4,
 };
 
-
 function ProjectCard(props) {
     const [open, setOpen] = useToggle();
 
-    const test = () => {
-        console.log("OUTSIDE")
-    }
     function toggle() {
         setOpen(!open);
     }
@@ -44,11 +38,8 @@ function ProjectCard(props) {
     return (
         <div>
             <Box className='flex transform project-box hover:scale-110 hover:-translate-y-1 transition ease-in-out' onClick={toggle}>
-                <Card className='w-80 rounded-lg'>
-                    {/* <CardHeader className='text-base'
-                // title={props.title}
-            /> */}
-                    <p className='text-xl font-bold text-center my-2 antialiased '>{props.title}</p>
+                <Card className='w-20 sm:w-80 rounded-lg'>
+                    <p className='sm:text-xl text-base font-bold text-center my-2 antialiased '>{props.title}</p>
                     <CardMedia
                         component="img"
                         // height="194"
@@ -59,7 +50,7 @@ function ProjectCard(props) {
                         {
                             props.icons &&
                             (props.icons).map((icon, index) => {
-                                return (<img src={icon} className='px-1 w-10' />);
+                                return (<img src={icon} alt="used techs" className='px-1 w-5 sm:w-10'/>);
                             })
                         }
                     </CardActions>
@@ -91,27 +82,45 @@ function ProjectCard(props) {
                                 alt="payroll mobile"
                             />
                             <br/>
-                            <Box className="text-center">{props.description}</Box>
+                            <Box className="text-center text-sm sm:text-sm">{props.description}</Box>
 
                             <CardActions disableSpacing className='justify-center' id="transition-modal-description">
                                 <Grid container spacing={1}>
-                                    <Grid item xs={4} md={5} className='flex space-x-2'>
+                                    <Grid item xs={12} md={5} className='flex space-x-2 justify-center'>
                                         <a href={props.gitlink} target="_blank" rel="noreferrer" title="To The Source" className="">
-                                            <Avatar alt="GitHub" src={Source} className='w-4 h-auto hover:bg-gray-300' variant='rounded' sx={{ width: 36, height: 36 }} />
+                                            <Avatar alt="Source" src={Source} className='w-1 sm:w-4 h-auto hover:bg-gray-300' variant='rounded' sx={{
+                                                 width: {
+                                                    xs:18,
+                                                    sm: 36
+                                                 }, 
+                                                 height: {
+                                                    xs:18,
+                                                    sm: 36
+                                                 }
+                                                 }} />
                                         </a>
                                         <a href={props.link} target="_blank" rel="noreferrer" title="To The App" className="">
-                                            <Avatar alt="GitHub" src={Show} className='w-4 h-auto hover:bg-gray-300' variant='rounded' sx={{ width: 36, height: 36 }} />
+                                            <Avatar alt="App" src={Show} className='w-1 sm:w-4 h-auto hover:bg-gray-300' variant='rounded' sx={{
+                                                width: {
+                                                    xs: 18,
+                                                    sm: 36
+                                                },
+                                                height: {
+                                                    xs: 18,
+                                                    sm: 36
+                                                }
+                                            }} />
                                         </a>
                                     </Grid>
-                                    <Grid item xs={4} md={4} className='flex' >
+                                    <Grid item xs={12} md={4} className='flex justify-center' >
                                         {
                                             props.icons &&
                                             (props.icons).map((icon, index) => {
-                                                return (<img src={icon} className='px-2 w-12'/>);
+                                                return (<img src={icon} alt="used techs" className='px-2 w-8 sm:w-12'/>);
                                             })
                                         }
                                     </Grid>
-                                    <Grid item xs={4} md={3} className=''>
+                                    <Grid item xs={2} md={3} className=''>
 
                                     </Grid>
 
