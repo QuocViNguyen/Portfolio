@@ -1,6 +1,3 @@
-
-
-
 function ProjectDetail(props) {
     return (
         null
